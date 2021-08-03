@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Teko:wght@500&display=swap');
+
+:root {
+    --font-size: 16px;
+    --textFont: 'Open Sans', sans-serif;
+    --titleFont: 'Teko', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+    font-size: var(--font-size);
+    font-family: var(--textFont);
+    outline: none;
+    user-select: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {font-weight: 900}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.75rem;
+    text-transform: uppercase;
+    font-family: var(--titleFont)
+}
+
+h3 {font-size: 1rem !important}
+
+.container {
+    display: grid;
+    border: 1px solid;
+    padding: 1rem;
+    gap: 0.5rem;
+    border-radius: 3px;
+}
+
+header {
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto max-content;
+    border-bottom: 1px solid;
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+button {
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+}
+
+button:hover {opacity: 0.8}
+
+button:active {box-shadow: inset 0 0 0 2px black}
+
+.task {
+    background-color: rgb(228, 228, 228);
+    border-radius: 3px;
+    border: 1px solid rgb(179, 179, 179);
+    padding: 0.25rem 0.5rem;
+    display: grid;
+    grid-template-columns: auto max-content;
+    gap: 0;
+    align-items: center;
+}
+
+.task > svg {
+    color: white;
+    font-size: 1.2rem;
+    background-color: rgb(204, 0, 0);
+    grid-row: 1/3;
+    grid-column: 2;
+    border-radius: 3px;
+    padding: 0.2rem;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.task > svg:hover {opacity: 1}
+
+.task > svg:active {box-shadow: inset 0 0 0 1px black}
+
+.task * {font-size: 0.9rem}
+
+.task.reminder {border-left: 6px solid green}
+
+form {
+    background-color: rgb(136, 173, 136);
+    display: grid;
+    padding: 1rem;
+    gap: 0.75rem;
+    border-radius: 3px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+form > div {
+    display: grid;
+    gap: 0.1rem;
+    align-items: center;
+}
+
+input[type=checkbox] {cursor: pointer}
+
+input[type=text], input[type=datetime-local] {
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+}
+
+input[type=submit] {
+    width: max-content;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    opacity: 0.8;
+    justify-self: right;
+}
+
+input[type=submit]:hover {opacity: 1}
+
+input[type=submit]:active {box-shadow: inset 0 0 0 1px white}
